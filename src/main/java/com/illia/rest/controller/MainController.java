@@ -16,24 +16,27 @@ public class MainController {
     @RequestMapping(value= "/{time}", method = RequestMethod.GET)
     @ResponseBody
     public MyDataObject getMyData(@PathVariable long time) {
-        return new MyDataObject(Calendar.getInstance(), "Это ответ метода GET!");
+        return new MyDataObject(Calendar.getInstance(), "This is GET response!");
     }
+
     // принимает Объект MyDataObject и отдает его клиенту
     @RequestMapping(method = RequestMethod.PUT)
     @ResponseBody
     public MyDataObject putMyData(@RequestBody MyDataObject md) {
         return md;
     }
+
     // http методом POST отдает объект MyDataObject
     @RequestMapping(method = RequestMethod.POST)
     @ResponseBody
     public MyDataObject postMyData() {
-        return new MyDataObject(Calendar.getInstance(), "это ответ метода POST!");
+        return new MyDataObject(Calendar.getInstance(), "This is POST response!");
     }
+
     //принимает ВРЕМЯ методом DELETE и на его основе можно удалит объект
     @RequestMapping(value= "/{time}", method = RequestMethod.DELETE)
     @ResponseBody
     public MyDataObject deleteMyData(@PathVariable long time) {
-        return new MyDataObject(Calendar.getInstance(), "Это ответ метода DELETE!");
+        return new MyDataObject(Calendar.getInstance(), "This is DELETE response!");
     }
 }

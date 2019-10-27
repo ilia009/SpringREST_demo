@@ -7,8 +7,8 @@ var RestGet = function() {
         dataType: 'json',
         async: true,
         success: function(result) {
-            alert('Время: ' + result.time
-                + ', сообщение: ' + result.message);
+            alert('Time: ' + result.time
+                + ', message: ' + result.message);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert(jqXHR.status + ' ' + jqXHR.responseText);
@@ -19,7 +19,7 @@ var RestGet = function() {
 var RestPut = function() {
     var JSONObject= {
         'time': Date.now(),
-        'message': 'Это пример вызова PUT метода'
+        'message': 'This is example of PUT method'
     };
 
     $.ajax({
@@ -30,8 +30,8 @@ var RestPut = function() {
         dataType: 'json',
         async: true,
         success: function(result) {
-            alert('Время: ' + result.time
-                + ', сообщенеи: ' + result.message);
+            alert('Time: ' + result.time
+                + ', message: ' + result.message);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert(jqXHR.status + ' ' + jqXHR.responseText);
@@ -46,8 +46,8 @@ var RestPost = function() {
         dataType: 'json',
         async: true,
         success: function(result) {
-            alert('Время: ' + result.time
-                + ', сообщение: ' + result.message);
+            alert('Time: ' + result.time
+                + ', message: ' + result.message);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert(jqXHR.status + ' ' + jqXHR.responseText);
@@ -62,8 +62,8 @@ var RestDelete = function() {
         dataType: 'json',
         async: true,
         success: function(result) {
-            alert('Время: ' + result.time
-                + ', сообщение: ' + result.message);
+            alert('Time: ' + result.time
+                + ', message: ' + result.message);
         },
         error: function(jqXHR, textStatus, errorThrown) {
             alert(jqXHR.status + ' ' + jqXHR.responseText);
